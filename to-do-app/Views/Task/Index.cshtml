@@ -1,0 +1,21 @@
+﻿@model IEnumerable<to_do_app.Models.AppTask>
+
+@{
+    ViewData["Title"] = "To do list";
+}
+
+@if (Model.Any())
+{
+    @foreach (var appTask in Model)
+    {
+        <p>@appTask.Id</p>
+        <p>@appTask.Name</p>
+        <p>@appTask.TaskDescription</p>
+        <p>@appTask.User</p>
+        <br>
+    }
+}
+else
+{
+    <p>There's no Task :d</p>
+}
